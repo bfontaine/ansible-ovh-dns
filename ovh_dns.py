@@ -204,7 +204,7 @@ def main():
         if removes:
             rn = re.compile(removes, re.IGNORECASE)
         else:
-            rn = re.compile("^{}$".format(name), re.IGNORECASE)
+            rn = re.compile("^{}$".format(re.escape(name)), re.IGNORECASE)
         if targetval:
             rv = re.compile(targetval, re.IGNORECASE)
         else:
